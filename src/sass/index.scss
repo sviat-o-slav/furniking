@@ -54,6 +54,16 @@ $text: #555555;
     color: $white;
 }
 
+@mixin header-navigation-main-font {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+
 body {
     margin: 0;
     min-width: 1220px;
@@ -232,17 +242,17 @@ ul {
         display: flex;
         align-items: center;
         justify-content: center;
-        
+
         position: absolute;
         right: -5px;
         top: -5px;
-        
+
         width: 18px;
         height: 18px;
-        
+
         border-radius: 50%;
         background-color: $green;
-        
+
         @include header-cart-badge-font;
     }
 
@@ -258,7 +268,47 @@ ul {
 
 
 
+.header-navigation-block {
+    background: #F7F8FA;
+}
 
+.header-navigation {
+    display: flex;
+
+    @include header-navigation-main-font;
+
+    .header-decoration-block {
+        display: flex;
+        justify-content: center;
+        column-gap: 20px;
+
+        width: 260px;
+        box-sizing: border-box;
+
+        padding: 25px 35px;
+        background-color: $green;
+        color: $white;
+
+        span {
+            display: block;
+            background: url("../assets/menu.svg") no-repeat center;
+            width: 18px;
+            height: 18px;
+        }
+    }
+}
+
+.header-navigation-main {
+    display: flex;
+    padding: 25px 80px;
+    align-items: center;
+    column-gap: 55px;
+
+    a {
+        color: $text;
+        padding: 5px;
+    }
+}
 
 
 
