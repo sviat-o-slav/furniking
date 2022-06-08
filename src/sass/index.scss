@@ -8,6 +8,8 @@ $green: #7AC751;
 $grey: #B0B0B0;
 $light-grey: #E9E9E9;
 $text: #555555;
+$nav-grey: #F7F8FA;
+$nav-border: #E3E3E3;
 
 @mixin font-inherit {
     font-family: inherit;
@@ -62,6 +64,17 @@ $text: #555555;
     line-height: 19px;
     letter-spacing: 0.02em;
     text-transform: uppercase;
+}
+
+@mixin aside-menu-font {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.02em;
+    color: $text;
+    text-transform: capitalize;
 }
 
 body {
@@ -172,7 +185,7 @@ ul {
     border-radius: 8px;
 
     .header-search-input {
-        margin: 1px;
+        margin: 2px;
         border: none;
         padding: 15px 25px;
         width: 380px;
@@ -265,11 +278,8 @@ ul {
     }
 }
 
-
-
-
 .header-navigation-block {
-    background: #F7F8FA;
+    background: $nav-grey;
 }
 
 .header-navigation {
@@ -309,6 +319,50 @@ ul {
         padding: 5px;
     }
 }
+
+
+
+
+
+
+
+
+
+.main-grid {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    margin-top: -1px;
+}
+
+.aside-categorys {
+    background-color: $nav-grey;
+
+    .aside-category-menu {
+        li:not(:last-child) {
+            border-bottom: 1px solid $nav-border;
+        }
+
+        a {
+            display: block;
+            @include aside-menu-font;
+            padding: 10px 20px;
+        }
+    }
+}
+
+.content {
+    margin-left: 10px;
+    margin-top: 10px;
+    background-color: #F3FBFF;
+}
+
+
+
+
+
+
+
+
 
 
 
