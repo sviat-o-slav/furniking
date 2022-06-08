@@ -334,19 +334,17 @@ ul {
     margin-top: -1px;
 }
 
-.aside-categorys {
+.aside-category-menu {
     background-color: $nav-grey;
 
-    .aside-category-menu {
-        li:not(:last-child) {
-            border-bottom: 1px solid $nav-border;
-        }
+    li:not(:last-child) {
+        border-bottom: 1px solid $nav-border;
+    }
 
-        a {
-            display: block;
-            @include aside-menu-font;
-            padding: 10px 20px;
-        }
+    a {
+        display: block;
+        @include aside-menu-font;
+        padding: 10px 20px;
     }
 }
 
