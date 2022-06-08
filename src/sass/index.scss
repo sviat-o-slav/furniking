@@ -10,6 +10,7 @@ $light-grey: #E9E9E9;
 $text: #555555;
 $nav-grey: #F7F8FA;
 $nav-border: #E3E3E3;
+$slide-dark: #2F2F2F;
 
 @mixin font-inherit {
     font-family: inherit;
@@ -77,9 +78,51 @@ $nav-border: #E3E3E3;
     text-transform: capitalize;
 }
 
+@mixin slide-h2-font {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: 0.05em;
+    color: $green;
+    text-transform: uppercase;
+}
+
+@mixin slide-h3-font {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 47px;
+    color: $slide-dark;
+    text-transform: capitalize;
+}
+
+@mixin slide-p-font {
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 27px;
+    line-height: 26px;
+    color: rgba(81, 81, 81, 0.71);
+}
+
+@mixin slide-a-font {
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: $white;
+    text-transform: uppercase;
+}
+
 body {
     margin: 0;
     min-width: 1220px;
+
+    min-height: 1400px;
 }
 
 a {
@@ -320,16 +363,6 @@ ul {
     }
 }
 
-
-
-option {
-    margin: 20px;
-}
-
-
-
-
-
 .main-grid {
     display: grid;
     grid-template-columns: 260px 1fr;
@@ -346,7 +379,7 @@ option {
     a {
         display: block;
         @include aside-menu-font;
-        padding: 10px 20px;
+        padding: 15px 20px;
     }
 }
 
@@ -356,14 +389,107 @@ option {
     background-color: #F3FBFF;
 }
 
+.slider-block {
+    position: relative;
+}
 
+.slider-controls {
+    display: flex;
+    column-gap: 20px;
 
+    position: absolute;
+    left: 45%;
+    
+    bottom: 20px;
 
+    .slider-dot {
+        display: block;
+        width: 20px;
+        height: 20px;
+        background-color: $green;
+        border-radius: 50%;
+        opacity: 0.3;
+        cursor: pointer;
 
+        &:hover {
+            opacity: 0.8;
+        }
+    }
 
+    .slider-dot-active {
+        opacity: 1;
+    }
+}
 
+.slide {
+    display: flex;
+    justify-content: space-between;
+    height: 440px;
 
+    padding: 35px 45px;
 
+    .slide-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width: 320px;
+
+        h2 {
+            margin: 0;
+            margin-bottom: 10px;
+            @include slide-h2-font;
+        }
+
+        h3 {
+            margin: 0;
+            margin-bottom: 30px;
+            @include slide-h3-font;
+        }
+
+        p {
+            @include slide-p-font;
+            margin: 0;
+            margin-bottom: 35px;
+        }
+
+        a {
+            display: block;
+            padding: 10px 20px;
+            @include slide-a-font;
+            background-color: $green;
+            border-radius: 5px;
+        }
+    }
+
+    .slide-image {
+        display: flex;
+        align-items: center;
+        width: 370px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .slide-thumbs {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 25px;
+
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 95px;
+            height: 95px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.56) 100%);
+            border: 2px solid #FFFFFF;
+            border-radius: 8px;
+        }
+    }
+}
 
 
 
