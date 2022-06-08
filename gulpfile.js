@@ -46,6 +46,12 @@ function images() {
         .pipe(browserSync.stream());
 }
 
+function fonts() {
+    return src('src/fonts/*')
+        .pipe(dest('build/fonts'))
+        .pipe(browserSync.stream());
+}
+
 function clean() {
     return del(['./build/*']);
 }
@@ -61,7 +67,7 @@ function dev() {
 }
 
 function build() {
-    return series(clean, parallel(js, css), images, html);
+    return series(clean, parallel(js, css), images, fonts, html);
 }
 
 exports.build = build();

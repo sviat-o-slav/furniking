@@ -10,7 +10,7 @@ Build all project:
 ```
 gulp build
 ```
-Run Browser-Sync watch mode:
+Run Browser-Sync watch mode server:
 ```
 gulp dev
 ```
