@@ -3,6 +3,11 @@
     src: url('../fonts/rubik-variable.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'Mulish';
+    src: url('../fonts/mulish-variable.ttf') format('truetype');
+}
+
 $white: #FFFFFF;
 $green: #7AC751;
 $grey: #B0B0B0;
@@ -116,6 +121,26 @@ $slide-dark: #2F2F2F;
     line-height: 20px;
     color: $white;
     text-transform: uppercase;
+}
+
+@mixin feature-h3-font {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 26px;
+    color: $text;
+    margin: 0;
+}
+
+@mixin feature-p-font {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    color: rgba(81, 81, 81, 0.71);
+    margin: 0;
 }
 
 body {
@@ -399,7 +424,7 @@ ul {
 
     position: absolute;
     left: 45%;
-    
+
     bottom: 20px;
 
     .slider-dot {
@@ -490,6 +515,83 @@ ul {
         }
     }
 }
+
+
+
+
+
+
+
+
+.feature-block {
+    display: flex;
+    justify-content: space-between;
+    margin: 65px 0;
+
+    .feature-item {
+        display: flex;
+        align-items: center;
+
+        span {
+            display: block;
+            width: 58px;
+            height: 58px;
+            margin-right: 20px;
+        }
+
+        .icon-delivery {
+            background: url("../assets/delivery.svg") no-repeat center;
+        }
+
+        .icon-present {
+            background: url("../assets/present.svg") no-repeat center;
+        }
+
+        .icon-payment {
+            background: url("../assets/wallet.svg") no-repeat center;
+        }
+
+        .icon-support {
+            background: url("../assets/support.svg") no-repeat center;
+        }
+
+        section {
+            display: flex;
+            flex-direction: column;
+
+            h3 {
+                @include feature-h3-font;
+            }
+
+            p {
+                @include feature-p-font;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
