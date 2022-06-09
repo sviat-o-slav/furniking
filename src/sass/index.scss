@@ -16,6 +16,7 @@ $text: #555555;
 $nav-grey: #F7F8FA;
 $nav-border: #E3E3E3;
 $slide-dark: #2F2F2F;
+$offer-link: #757575;
 
 @mixin font-inherit {
     font-family: inherit;
@@ -140,6 +141,36 @@ $slide-dark: #2F2F2F;
     font-size: 14px;
     line-height: 26px;
     color: rgba(81, 81, 81, 0.71);
+    margin: 0;
+}
+
+@mixin offer-h3-font {
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    color: $text;
+    margin: 0;
+}
+
+@mixin offer-p-font {
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+    color: $green;
+    margin: 0;
+}
+
+@mixin offer-a-font {
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: $offer-link;
     margin: 0;
 }
 
@@ -516,13 +547,6 @@ ul {
     }
 }
 
-
-
-
-
-
-
-
 .feature-block {
     display: flex;
     justify-content: space-between;
@@ -561,6 +585,7 @@ ul {
 
             h3 {
                 @include feature-h3-font;
+                text-transform: capitalize;
             }
 
             p {
@@ -573,6 +598,71 @@ ul {
 
 
 
+
+
+
+
+
+
+
+.offer-block {
+    display: grid;
+    grid-template-columns: 670px 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "big small""big small";
+    gap: 20px;
+    margin: 10px 0;
+
+    .offer-big {
+        grid-area: big;
+        background: url("../assets/offer-1.jpg") no-repeat right center;
+        background-size: cover;
+        height: 510px;
+    }
+
+    .offer-right-top {
+        background: url("../assets/offer-2.jpg") no-repeat right center;
+    }
+
+    .offer-right-bottom {
+        background: url("../assets/offer-3.jpg") no-repeat right center;
+    }
+
+    .offer-item {
+        box-sizing: border-box;
+        padding: 30px;
+
+        h3 {
+            @include offer-h3-font;
+            margin: 10px 0;
+        }
+
+        p {
+            @include offer-p-font;
+            margin-bottom: 10px;
+        }
+
+        a {
+            @include offer-a-font;
+
+            display: inline-flex;
+            align-items: baseline;
+
+            span {
+                display: block;
+
+                width: 11px;
+                height: 9px;
+
+                margin-left: 5px;
+
+                background: url("../assets/arrow-right.svg") no-repeat center;
+            }
+        }
+        
+        background-color: #B0B0B0;
+    }
+}
 
 
 
