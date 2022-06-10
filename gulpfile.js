@@ -40,7 +40,7 @@ function js() {
 }
 
 function images() {
-    return src('src/assets/*')
+    return src('src/assets/**/*')
         .pipe(imagemin())
         .pipe(dest('build/assets'))
         .pipe(browserSync.stream());

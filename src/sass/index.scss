@@ -643,17 +643,17 @@ ul {
 
     .offer-big {
         grid-area: big;
-        background: url("../assets/offer-1.jpg") no-repeat right center;
+        background: url("../assets/offer/offer-1.jpg") no-repeat right center;
         background-size: cover;
         height: 510px;
     }
 
     .offer-right-top {
-        background: url("../assets/offer-2.jpg") no-repeat right center;
+        background: url("../assets/offer/offer-2.jpg") no-repeat right center;
     }
 
     .offer-right-bottom {
-        background: url("../assets/offer-3.jpg") no-repeat right center;
+        background: url("../assets/offer/offer-3.jpg") no-repeat right center;
     }
 
     .offer-item {
@@ -691,6 +691,58 @@ ul {
         background-color: #B0B0B0;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -797,47 +849,6 @@ ul {
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 a:hover {
     opacity: 0.7;
