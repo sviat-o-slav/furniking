@@ -1,3 +1,5 @@
+This is my first test Front projects made by free Figma templates. Just for learn front UI.
+
 ## Requiremetns:
 - npm 8.5.0
 - node 16.14.2

@@ -17,6 +17,8 @@ $nav-grey: #F7F8FA;
 $nav-border: #E3E3E3;
 $slide-dark: #2F2F2F;
 $offer-link: #757575;
+$blue: #00B7F1;
+$text-grey: #C2C2C2;
 
 @mixin font-inherit {
     font-family: inherit;
@@ -212,11 +214,74 @@ $offer-link: #757575;
     color: $text;
 }
 
+@mixin trending-card-h4-font {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    letter-spacing: 0.005em;
+    color: $text;
+    margin: 0;
+}
+
+@mixin trending-card-p-font {
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+    letter-spacing: 0.008em;
+    text-transform: uppercase;
+    color: rgba(117, 117, 117, 0.71);
+    margin: 0;
+}
+
+@mixin trending-card-price-font {
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 120%;
+    letter-spacing: 0.005em;
+    color: $green;
+}
+
+@mixin trending-card-badge-font {
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 130%;
+    text-align: center;
+    letter-spacing: 0.008em;
+    color: $white;
+}
+
+@mixin trending-h2-font {
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 45px;
+    color: $text;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+@mixin trending-categoies-font {
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 30px;
+    margin: 0;
+    text-transform: capitalize;
+}
+
 body {
     margin: 0;
     min-width: 1220px;
-
-    min-height: 1400px;
 }
 
 a {
@@ -242,11 +307,19 @@ ul {
     overflow: hidden;
 }
 
+.bg-green {
+    background-color: $green;
+}
+
+.bg-blue {
+    background-color: $blue;
+}
+
 .container {
     width: 1200px;
     box-sizing: border-box;
     margin: 0 auto;
-    padding: 1px 15px;
+    padding: 0px 15px;
 }
 
 .header-welcome-block {
@@ -695,12 +768,170 @@ ul {
 
 
 
+.trending-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
+    margin-top: 100px;
+    margin-bottom: 100px;
 
+    h2 {
+        @include trending-h2-font;
+        
+    }
 
+    .trending-categories {
+        display: flex;
+        justify-content: center;
+        column-gap: 70px;
+        padding-bottom: 70px;
+        padding-top: 45px;
 
+        @include trending-categoies-font;
 
+        a {
+            @include font-inherit;
+        }
 
+        .trending-categories-active {
+            color: $green;
+        }
+    }
+
+    .trending-paginator {
+        display: flex;
+        margin-top: 60px;
+        column-gap: 15px;
+
+        li {
+            display: block;
+
+            width: 18px;
+            height: 18px;
+
+            border-radius: 50%;
+            background-color: $white;
+            border: 6px solid $green;
+        }
+
+        .trending-paginator-active {
+            background: $green;
+        }
+    }
+}
+
+.trending-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    column-gap: 30px;
+    row-gap: 45px;
+
+    .trending-card {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        &:hover {
+            .trending-card-menu {
+                opacity: 1;
+            }
+        }
+
+        h4 {
+            @include trending-card-h4-font;
+            margin-top: 5px;
+        }
+
+        p {
+            @include trending-card-p-font;
+            order: -1;
+            margin-top: 15px;
+        }
+
+        img {
+            order: -2;
+            width: 100%;
+        }
+
+        .trending-card-badge {
+            display: block;
+            position: absolute;
+            align-self: flex-start;
+            padding: 2px 10px;
+            border-bottom-right-radius: 5px;
+            top: 0;
+            left: 1px;
+
+            @include trending-card-badge-font;
+        }
+
+        .trending-card-price {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+            @include trending-card-price-font;
+
+            &>span {
+                margin-right: 10px;
+            }
+
+            .trending-card-old-price {
+                color: $light-grey;
+                font-weight: 400;
+                text-decoration: line-through;
+            }
+
+            .trending-card-rating {
+                display: block;
+                margin-left: auto;
+                width: 70px;
+                height: 10px;
+                background: url("../assets/rating.svg") no-repeat center;
+            }
+        }
+
+        .trending-card-menu {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            row-gap: 10px;
+
+            opacity: 0;
+            transition-property: opacity;
+            transition-duration: 0.4s;
+
+            position: absolute;
+
+            top: 90px;
+            right: 10px;
+
+            a {
+                display: block;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+            }
+
+            .icon-heart {
+                background: $white url("../assets/heart.svg") no-repeat center;
+            }
+
+            .icon-cart-plus {
+                background: $white url("../assets/cart-plus.svg") no-repeat center;
+            }
+
+            .icon-refresh {
+                background: $white url("../assets/refresh.svg") no-repeat center;
+            }
+
+            .icon-eye {
+                background: $white url("../assets/eye.svg") no-repeat center;
+            }
+        }
+    }
+}
 
 
 
