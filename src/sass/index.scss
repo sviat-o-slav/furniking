@@ -19,6 +19,7 @@ $slide-dark: #2F2F2F;
 $offer-link: #757575;
 $blue: #00B7F1;
 $text-grey: #C2C2C2;
+$red: #FF6868;
 
 @mixin font-inherit {
     font-family: inherit;
@@ -313,6 +314,10 @@ ul {
 
 .bg-blue {
     background-color: $blue;
+}
+
+.bg-red {
+    background-color: $red;
 }
 
 .container {
@@ -765,9 +770,6 @@ ul {
     }
 }
 
-
-
-
 .trending-block {
     display: flex;
     flex-direction: column;
@@ -778,7 +780,6 @@ ul {
 
     h2 {
         @include trending-h2-font;
-        
     }
 
     .trending-categories {
@@ -813,6 +814,11 @@ ul {
             border-radius: 50%;
             background-color: $white;
             border: 6px solid $green;
+
+            &:hover {
+                cursor: pointer;
+                opacity: 0.8;
+            }
         }
 
         .trending-paginator-active {
@@ -842,6 +848,7 @@ ul {
         h4 {
             @include trending-card-h4-font;
             margin-top: 5px;
+            text-transform: capitalize;
         }
 
         p {
@@ -912,6 +919,10 @@ ul {
                 width: 40px;
                 height: 40px;
                 border-radius: 50%;
+
+                &:hover {
+                    background-color: $green;
+                }
             }
 
             .icon-heart {
