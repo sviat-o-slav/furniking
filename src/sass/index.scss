@@ -280,6 +280,25 @@ $red: #FF6868;
     text-transform: capitalize;
 }
 
+@mixin products-paginator-button-font {
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 23px;
+    color: $white;
+}
+
+@mixin products-paginator-font {
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 130%;
+    letter-spacing: 0.008em;
+    color: $offer-link;
+}
+
 body {
     margin: 0;
     min-width: 1220px;
@@ -952,7 +971,73 @@ ul {
 
 
 
+.products-paginator {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
+    margin-top: 60px;
+    align-self: flex-end;
+    width: 570px;
+
+    a {
+        display: inline-flex;
+        align-items: center;
+        @include products-paginator-button-font;
+        padding: 10px 20px;
+        background-color: $green;
+        margin-right: 20px;
+
+        span {
+            display: block;
+            margin-left: 10px;
+            width: 14px;
+            height: 14px;
+            background: url("../assets/arrow-right-white.svg") no-repeat center;
+        }
+    }
+
+    @include products-paginator-font;
+
+
+    form {
+        display: flex;
+        align-items: center;
+
+        input {
+            @include font-inherit;
+            width: 40px;
+            margin: 0 10px;
+            border: 1px solid $text-grey;
+            border-radius: 3px;
+            text-align: center;
+        }
+
+        button {
+            display: block;
+            width: 30px;
+            height: 30px;
+            border: none;
+            cursor: pointer;
+        }
+
+        p {
+            margin-right: 10px;
+        }
+
+        .button-next {
+            border-radius: 0 0 3px 3px;
+            background: $green url("../assets/arrow-down.svg") no-repeat center;
+            transform: rotate(-90deg);
+        }
+
+        .button-previous {
+            border-radius: 0 0 3px 3px;
+            background: $green url("../assets/arrow-down.svg") no-repeat center;
+            transform: rotate(90deg);
+        }
+    }
+}
 
 
 
@@ -1092,6 +1177,7 @@ ul {
     }
 }
 
-a:hover {
+a:hover,
+button:hover {
     opacity: 0.7;
 }
