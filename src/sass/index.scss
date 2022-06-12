@@ -318,6 +318,47 @@ $red: #FF6868;
     color: $white;
 }
 
+@mixin article-h3-font {
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 39px;
+    line-height: 120%;
+    letter-spacing: 0.005em;
+    color: $white;
+}
+
+@mixin article-a-font {
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 130%;
+    letter-spacing: 0.008em;
+    color: $white;
+}
+
+@mixin articel-date-font {
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+    letter-spacing: 0.008em;
+    color: $white;
+}
+
+@mixin article-promotion-font {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 130%;
+    letter-spacing: 0.008em;
+    text-transform: uppercase;
+    color: $green;
+}
+
 body {
     margin: 0;
     min-width: 1220px;
@@ -1050,15 +1091,6 @@ ul {
     }
 }
 
-
-
-
-
-
-
-
-
-
 .offer-special-block {
     display: flex;
     flex-direction: column;
@@ -1174,25 +1206,76 @@ ul {
     }
 }
 
+.article-block {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 
-
-
-
-
-
-
+    &>h2 {
+        @include trending-h2-font;
+        margin-bottom: 60px;
+    }
+}
 
 .article-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-    gap: 25px;
+    gap: 20px;
+
+    align-self: stretch;
 
     .article-item {
         background-color: #00B7F1;
-        border-radius: 8px;
+        border-radius: 10px;
 
-        
+        height: 450px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        position: relative;
+
+        img {
+            border-radius: 10px;
+            width: 100%;
+            top: 0;
+            right: 0;
+        }
+
+        .article-item-text {
+            position: absolute;
+            padding: 40px;
+
+            h3 {
+                @include article-h3-font;
+                margin-top: 30px;
+            }
+
+            a {
+                @include article-a-font;
+                padding: 5px;
+            }
+        }
+
+        .article-promote {
+            display: flex;
+            align-items: center;
+            column-gap: 10px;
+
+            span {
+                @include article-promotion-font;
+                padding: 5px 10px;
+                padding-left: 30px;
+                border-radius: 3px;
+                background: $white url("../assets/promotion.svg") no-repeat 8px center;
+            }
+
+            time {
+                @include articel-date-font;
+            }
+        }
     }
 
 }
