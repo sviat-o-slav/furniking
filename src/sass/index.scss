@@ -30,9 +30,12 @@ $red: #FF6868;
     color: inherit;
 }
 
-@mixin header-welcome-font {
-    font-family: 'Rubik', sans-serif;
+@mixin mulish-font {
+    font-family: 'Mulish';
     font-style: normal;
+}
+
+@mixin header-welcome-font {
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
@@ -40,8 +43,6 @@ $red: #FF6868;
 }
 
 @mixin header-search-logo-font {
-    font-family: 'Rubik', sans-serif;
-    font-style: normal;
     font-weight: 600;
     font-size: 24px;
     line-height: 28px;
@@ -49,8 +50,6 @@ $red: #FF6868;
 }
 
 @mixin header-search-input-font {
-    font-family: 'Rubik';
-    font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
@@ -58,8 +57,6 @@ $red: #FF6868;
 }
 
 @mixin header-cart-badge-font {
-    font-family: 'Rubik';
-    font-style: normal;
     font-weight: 600;
     font-size: 9px;
     line-height: 8px;
@@ -67,8 +64,6 @@ $red: #FF6868;
 }
 
 @mixin header-navigation-main-font {
-    font-family: 'Rubik';
-    font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
@@ -77,8 +72,6 @@ $red: #FF6868;
 }
 
 @mixin aside-menu-font {
-    font-family: 'Rubik';
-    font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
@@ -88,8 +81,6 @@ $red: #FF6868;
 }
 
 @mixin slide-h2-font {
-    font-family: 'Rubik';
-    font-style: normal;
     font-weight: 400;
     font-size: 22px;
     line-height: 26px;
@@ -99,8 +90,6 @@ $red: #FF6868;
 }
 
 @mixin slide-h3-font {
-    font-family: 'Rubik';
-    font-style: normal;
     font-weight: 500;
     font-size: 40px;
     line-height: 47px;
@@ -109,8 +98,7 @@ $red: #FF6868;
 }
 
 @mixin slide-p-font {
-    font-family: 'Mulish';
-    font-style: normal;
+    @include mulish-font;
     font-weight: 600;
     font-size: 27px;
     line-height: 26px;
@@ -118,8 +106,7 @@ $red: #FF6868;
 }
 
 @mixin slide-a-font {
-    font-family: 'Mulish';
-    font-style: normal;
+    @include mulish-font;
     font-weight: 700;
     font-size: 16px;
     line-height: 20px;
@@ -128,8 +115,6 @@ $red: #FF6868;
 }
 
 @mixin feature-h3-font {
-    font-family: 'Rubik';
-    font-style: normal;
     font-weight: 500;
     font-size: 20px;
     line-height: 26px;
@@ -138,8 +123,6 @@ $red: #FF6868;
 }
 
 @mixin feature-p-font {
-    font-family: 'Rubik';
-    font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 26px;
@@ -148,8 +131,7 @@ $red: #FF6868;
 }
 
 @mixin offer-h3-font {
-    font-family: 'Mulish';
-    font-style: normal;
+    @include mulish-font;
     font-weight: 700;
     font-size: 22px;
     line-height: 26px;
@@ -158,8 +140,7 @@ $red: #FF6868;
 }
 
 @mixin offer-p-font {
-    font-family: 'Mulish';
-    font-style: normal;
+    @include mulish-font;
     font-weight: 600;
     font-size: 20px;
     line-height: 26px;
@@ -168,8 +149,7 @@ $red: #FF6868;
 }
 
 @mixin offer-a-font {
-    font-family: 'Mulish';
-    font-style: normal;
+    @include mulish-font;
     font-weight: 400;
     font-size: 16px;
     line-height: 26px;
@@ -178,8 +158,6 @@ $red: #FF6868;
 }
 
 @mixin footer-link-font {
-    font-family: 'Rubik';
-    font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 40px;
@@ -189,8 +167,6 @@ $red: #FF6868;
 }
 
 @mixin footer-logo-a-font {
-    font-family: 'Rubik';
-    font-style: normal;
     font-weight: 500;
     font-size: 24px;
     line-height: 28px;
@@ -198,8 +174,6 @@ $red: #FF6868;
 }
 
 @mixin footer-logo-p-font {
-    font-family: 'Rubik';
-    font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 32px;
@@ -207,8 +181,6 @@ $red: #FF6868;
 }
 
 @mixin footer-copyright-font {
-    font-family: 'Rubik';
-    font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 14px;
@@ -216,8 +188,6 @@ $red: #FF6868;
 }
 
 @mixin trending-card-h4-font {
-    font-family: 'Rubik';
-    font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 120%;
@@ -227,8 +197,7 @@ $red: #FF6868;
 }
 
 @mixin trending-card-p-font {
-    font-family: 'Mulish';
-    font-style: normal;
+    @include mulish-font;
     font-weight: 400;
     font-size: 14px;
     line-height: 130%;
@@ -239,8 +208,7 @@ $red: #FF6868;
 }
 
 @mixin trending-card-price-font {
-    font-family: 'Mulish';
-    font-style: normal;
+    @include mulish-font;
     font-weight: 700;
     font-size: 18px;
     line-height: 120%;
@@ -249,8 +217,7 @@ $red: #FF6868;
 }
 
 @mixin trending-card-badge-font {
-    font-family: 'Mulish';
-    font-style: normal;
+    @include mulish-font;
     font-weight: 600;
     font-size: 12px;
     line-height: 130%;
@@ -260,8 +227,7 @@ $red: #FF6868;
 }
 
 @mixin trending-h2-font {
-    font-family: 'Mulish';
-    font-style: normal;
+    @include mulish-font;
     font-weight: 700;
     font-size: 36px;
     line-height: 45px;
@@ -271,8 +237,7 @@ $red: #FF6868;
 }
 
 @mixin trending-categoies-font {
-    font-family: 'Mulish';
-    font-style: normal;
+    @include mulish-font;
     font-weight: 600;
     font-size: 24px;
     line-height: 30px;
@@ -281,8 +246,7 @@ $red: #FF6868;
 }
 
 @mixin products-paginator-button-font {
-    font-family: 'Mulish';
-    font-style: normal;
+    @include mulish-font;
     font-weight: 600;
     font-size: 18px;
     line-height: 23px;
@@ -290,8 +254,7 @@ $red: #FF6868;
 }
 
 @mixin products-paginator-font {
-    font-family: 'Mulish';
-    font-style: normal;
+    @include mulish-font;
     font-weight: 400;
     font-size: 18px;
     line-height: 130%;
@@ -300,8 +263,6 @@ $red: #FF6868;
 }
 
 @mixin offer-special-times-digits {
-    font-family: 'Rubik';
-    font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 120%;
@@ -309,8 +270,6 @@ $red: #FF6868;
 }
 
 @mixin offer-special-times-label {
-    font-family: 'Rubik';
-    font-style: normal;
     font-weight: 400;
     font-size: 6px;
     line-height: 120%;
@@ -319,8 +278,7 @@ $red: #FF6868;
 }
 
 @mixin article-h3-font {
-    font-family: 'Mulish';
-    font-style: normal;
+    @include mulish-font;
     font-weight: 700;
     font-size: 39px;
     line-height: 120%;
@@ -329,8 +287,7 @@ $red: #FF6868;
 }
 
 @mixin article-a-font {
-    font-family: 'Mulish';
-    font-style: normal;
+    @include mulish-font;
     font-weight: 600;
     font-size: 14px;
     line-height: 130%;
@@ -339,8 +296,7 @@ $red: #FF6868;
 }
 
 @mixin articel-date-font {
-    font-family: 'Mulish';
-    font-style: normal;
+    @include mulish-font;
     font-weight: 400;
     font-size: 14px;
     line-height: 130%;
@@ -349,8 +305,7 @@ $red: #FF6868;
 }
 
 @mixin article-promotion-font {
-    font-family: 'DM Sans';
-    font-style: normal;
+    @include mulish-font;
     font-weight: 500;
     font-size: 12px;
     line-height: 130%;
@@ -359,9 +314,38 @@ $red: #FF6868;
     color: $green;
 }
 
+@mixin feedback-text-font {
+    @include mulish-font;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: 0.005em;
+    color: $text;
+}
+
+@mixin feedback-author-font {
+    @include mulish-font;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 120%;
+    letter-spacing: 0.005em;
+    color: $text;
+}
+
+@mixin feedback-proffesi-font {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 125%;
+    letter-spacing: 0.005em;
+    color: $text;
+}
+
 body {
     margin: 0;
     min-width: 1220px;
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
 }
 
 a {
@@ -1221,7 +1205,7 @@ ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-    gap: 20px;
+    gap: 30px;
 
     align-self: stretch;
 
@@ -1280,43 +1264,79 @@ ul {
 
 }
 
+.feedback-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
+    margin: 120px 0;
 
+    h2 {
+        @include trending-h2-font;
+    }
+}
 
+.feedback-carousel {
+    display: flex;
+    align-items: center;
+    margin-top: 80px;
 
+    .feedback-carousel-previous {
+        width: 75px;
+        height: 75px;
+        background: url("../assets/arrow-slide-right.svg") no-repeat center;
+        transform: rotate(180deg);
+        cursor: pointer;
+    }
 
+    .feedback-carousel-next {
+        width: 75px;
+        height: 75px;
+        background: url("../assets/arrow-slide-right.svg") no-repeat center;
+        cursor: pointer;
+    }
 
+    .feedback-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
+        position: relative;
 
+        background: #F8FAFB;
+        box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.05);
+        border-radius: 8px;
 
+        padding: 50px 125px;
+        padding-top: 80px;
 
+        margin: 0 40px;
 
+        .feedback-avatar {
+            display: block;
+            position: absolute;
+            width: 88px;
+            height: 88px;
+            border-radius: 50%;
+            top: -44px;
+        }
 
+        .feedback-comment {
+            @include feedback-text-font;
+            margin-bottom: 30px;
 
+        }
 
+        .feedback-author {
+            @include feedback-author-font;
+            margin-bottom: 10px;
+        }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        .feedback-proffesi {
+            @include feedback-proffesi-font;
+        }
+    }
+}
 
 .footer-block {
     display: flex;
