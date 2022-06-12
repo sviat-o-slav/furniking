@@ -39,7 +39,7 @@ function js() {
         .pipe(browserSync.stream());
 }
 
-function images() {
+function assets() {
     return src('src/assets/**/*')
         .pipe(imagemin())
         .pipe(dest('build/assets'))
@@ -63,11 +63,11 @@ function dev() {
     watch('src/*.html', html);
     watch('src/sass/*.scss', css);
     watch('src/js/*.js', js);
-    watch('src/assets/*', images);
+    watch('src/assets/*', assets);
 }
 
 function build() {
-    return series(clean, parallel(js, css), images, fonts, html);
+    return series(clean, parallel(js, css), assets, fonts, html);
 }
 
 exports.build = build();
